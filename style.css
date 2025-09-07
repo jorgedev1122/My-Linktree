@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Variáveis padrão (dark theme) ===== */
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.2);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --link-color: red;
+  --footer-heart: #fff;
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+/* ===== Light theme ===== */
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --link-color: blue;
+  --footer-heart: black;
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg-url) no-repeat top center/cover;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0;
+  padding: 0 24px;
+}
+/*PROFILE*/
+#profile {
+  text-align: center;
+  padding: 24px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* ===== BOTÃO MUDA COR ===== */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 20px auto 0; /* só empurra pra baixo, não afeta o de cima */
+  margin: 0 auto 20px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0; /* começa na esquerda no dark */
+  z-index: 1;
+  transform: translateY(-50%);
+  transition: left 0.3s, right 0.3s; /* anima a transição */
+}
+
+.light #switch button {
+  left: initial;
+  right: 0; /* no light vai pra direita */
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*AQUI É A UL*/
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color); /* ← adicione isso */
+
+  transition: background 0.2s, border 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* ===== Botão especial ===== */
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: transparent;
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, border 0.2s;
+}
+
+.button-link:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* ===== Social links ===== */
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 32px;
+  color: var(--text-color);
+  transition: transform 0.2s, color 0.2s;
+}
+
+#social-links a:hover {
+  transform: scale(1.2);
+  color: var(--highlight-color);
+}
+
+/* ===== Footer ===== */
+#footer {
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 24px;
+}
+
+#footer a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#footer ion-icon {
+  color: var(--footer-heart);
+  vertical-align: middle;
+}
+
+/* ===== Credit link ===== */
+.credit-link {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  color: var(--text-color);
+  display: inline;
+  font-weight: 500;
+}
