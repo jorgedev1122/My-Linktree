@@ -1,4 +1,3 @@
-/* RESET basico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,20 +6,18 @@
 html,
 body {
   height: 100%;
+  font-family: "Inter", sans-serif;
 }
 
-/* VARIÁVEIS (navy theme) */
+/* VARIÁVEIS */
 :root {
   --bg-dark-1: #060409;
   --navy: #0b3d91;
   --purple: #2b0f3a;
   --muted: #cfcfcf;
   --glass: rgba(255, 255, 255, 0.03);
-  --glass-strong: rgba(255, 255, 255, 0.05);
   --stroke: rgba(255, 255, 255, 0.06);
   --accent-glow: rgba(11, 61, 145, 0.18);
-  --max-width: 588px;
-  --radius: 12px;
   --bg-gradient: linear-gradient(135deg, var(--purple) 0%, #0c0c10 60%);
 }
 .light {
@@ -31,35 +28,16 @@ body {
   --accent-glow: rgba(11, 61, 145, 0.12);
   --bg-gradient: linear-gradient(135deg, #f0f1f5 0%, #d9dce6 60%);
 }
+
 body {
   background: var(--bg-gradient);
   color: var(--muted);
   -webkit-font-smoothing: antialiased;
 }
-/* BANNER (usa a capa se quiser) */
-.banner {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(
-    90deg,
-    rgba(11, 61, 145, 0.09),
-    rgba(43, 15, 58, 0.05)
-  );
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-.banner-img {
-  width: min(980px, 92%);
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
-/* CONTAINER */
 #container {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 588px;
   margin: 36px auto;
   padding: 0 18px;
   text-align: center;
@@ -97,7 +75,7 @@ body {
   background: var(--glass);
   border-radius: 999px;
   border: 1px solid var(--stroke);
-  transition: all 0.25s ease;
+  transition: background 0.25s ease, border 0.25s ease;
 }
 #switch button {
   position: absolute;
@@ -109,23 +87,23 @@ body {
   border-radius: 50%;
   border: none;
   background: white url("./assets/moon-stars.svg") center/60% no-repeat;
-  transition: left 0.25s ease, right 0.25s ease, transform 0.12s ease;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1),
+    background 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
   box-shadow: 0 6px 18px rgba(11, 61, 145, 0.06);
 }
 .light #switch button {
-  left: auto;
-  right: 4px;
+  transform: translateY(-50%) translateX(32px);
   background: white url("./assets/sun.svg") center/60% no-repeat;
 }
 
-/* LINKS - glass buttons */
+/* LINKS */
 .links-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 14px;
   margin: 18px 0;
-  padding: 0;
   align-items: center;
 }
 .btn {
@@ -135,7 +113,7 @@ body {
   padding: 14px 18px;
   background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.01));
   border: 1px solid var(--stroke);
-  border-radius: var(--radius);
+  border-radius: 12px;
   color: var(--muted);
   font-weight: 600;
   text-decoration: none;
@@ -176,63 +154,11 @@ body {
   margin-top: 16px;
   font-size: 14px;
   color: var(--muted);
-  padding-bottom: 28px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 #footer a {
   color: var(--navy);
   text-decoration: none;
   font-weight: 600;
-}
-
-/* MODAL */
-#modal.modal-hidden {
-  display: none;
-}
-#modal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 40;
-}
-.modal-card {
-  width: min(560px, 92%);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.01)
-  );
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid var(--stroke);
-  color: var(--muted);
-  box-shadow: 0 12px 40px rgba(11, 61, 145, 0.12);
-}
-.modal-card h3 {
-  margin-bottom: 8px;
-}
-.close {
-  border: 0;
-  background: none;
-  font-size: 18px;
-  float: right;
-  cursor: pointer;
-}
-
-/* RESPONSIVE */
-@media (max-width: 480px) {
-  .btn {
-    width: 92%;
-    padding: 12px;
-    font-size: 15px;
-  }
-  .banner-img {
-    max-height: 160px;
-  }
-  #avatar {
-    width: 96px;
-    height: 96px;
-  }
 }

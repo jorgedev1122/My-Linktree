@@ -2,7 +2,6 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linktree de Jorge Enrique</title>
 
@@ -27,7 +26,7 @@
 
       <!-- THEME SWITCH -->
       <div id="switch" aria-label="Toggle theme">
-        <button aria-hidden="true" onclick="toggleMode()"></button>
+        <button role="switch" aria-pressed="false" tabindex="0"></button>
         <span></span>
       </div>
 
@@ -63,8 +62,12 @@
           >
         </li>
         <li>
-          <button class="btn" id="copyBtn" data-copy="jorgedev1122@gmail.com">
-            Copiar meu email
+          <button
+            class="btn"
+            id="copyBtn"
+            data-copy="jorgeenriqueantunes@gmail.com"
+          >
+            Copiar meu Email
           </button>
         </li>
         <li>
@@ -100,29 +103,11 @@
       <!-- FOOTER -->
       <footer id="footer">
         <p>
-          Feito com <span class="heart">💜</span> por
+          Feito com <span class="heart">♡</span> por
           <a href="https://github.com/jorgedev1122" target="_blank">Jorge</a>
         </p>
       </footer>
     </main>
-
-    <!-- ABOUT MODAL -->
-    <div id="modal" class="modal-hidden" role="dialog" aria-modal="true">
-      <div class="modal-card">
-        <button id="closeModal" class="close">✕</button>
-        <h3>Sobre este projeto</h3>
-        <p>
-          Projeto inicial do curso Discover adaptado por mim. Mudei cores,
-          adicionei micro-interactions, botão de copiar email e responsividade.
-        </p>
-        <ul>
-          <li>Tecnologias: HTML • CSS • JavaScript</li>
-          <li>
-            Features adicionadas: tema navy, botões glass, copy-to-clipboard
-          </li>
-        </ul>
-      </div>
-    </div>
 
     <!-- Ionicons -->
     <script
