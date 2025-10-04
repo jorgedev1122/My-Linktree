@@ -16,9 +16,8 @@ Projeto baseado no curso Discover (Rocketseat) — **adaptado e personalizado po
 
 HTML • CSS • JavaScript
 
-### Como rodar local
+### Acesse Online
 
-1. `git clone https://github.com/jorgedev1122/seu-repo.git`
-2. Abrir `index.html` ou usar Live Server no VSCode.
+<a href="https://jorgedev1122.github.io/My-Linktree/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
 
 Feito com 💜 por Jorge
