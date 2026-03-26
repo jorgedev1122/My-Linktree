@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
@@ -18,84 +18,146 @@
   </head>
   <body>
     <main id="container">
-      <!-- PROFILE -->
-      <section id="profile">
-        <img src="./assets/avatar.png" alt="Avatar Jorge Enrique" id="avatar" />
-        <p class="handle">@jorge.enr1122</p>
+      <header id="topbar" class="reveal">
+        <a class="logo" href="#hero">j0rge<span>.2211</span></a>
+        <nav aria-label="Navegação principal">
+          <a href="#hero">Início</a>
+          <a href="#links">Links</a>
+          <a href="#projects">Projetos</a>
+          <a href="#social">Social</a>
+        </nav>
+      </header>
+
+      <section id="hero" class="reveal" aria-labelledby="hero-title">
+        <div id="profile">
+          <img
+            src="./assets/avatar.png"
+            alt="Avatar Jorge Enrique"
+            id="avatar"
+          />
+          <p class="handle">@j0rge.2211</p>
+        </div>
+        <h1 id="hero-title">Jorge Enrique</h1>
+        <p class="hero-text">
+          Desenvolvedor full-stack junior com foco em front-end, apaixonado por
+          criar experiências digitais incríveis.
+        </p>
+
+        <div id="switch" aria-label="Toggle theme">
+          <button role="switch" aria-pressed="false" tabindex="0"></button>
+          <span></span>
+        </div>
       </section>
 
-      <!-- THEME SWITCH -->
-      <div id="switch" aria-label="Toggle theme">
-        <button role="switch" aria-pressed="false" tabindex="0"></button>
-        <span></span>
-      </div>
+      <section
+        id="links"
+        class="links-content reveal"
+        aria-labelledby="links-title"
+      >
+        <h2 id="links-title">Conexões</h2>
+        <ul class="links-list">
+          <li>
+            <a
+              class="btn"
+              href="https://github.com/jorgedev1122"
+              target="_blank"
+              >Veja meu GitHub</a
+            >
+          </li>
+          <li>
+            <a class="btn" href="https://www.rocketseat.com.br/" target="_blank"
+              >Conheça a Rocketseat</a
+            >
+          </li>
+          <li>
+            <a
+              class="btn"
+              href="https://www.instagram.com/j0rge.2211/"
+              target="_blank"
+              >Contato via Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              class="btn"
+              href="https://app.rocketseat.com.br/me/jjorge-enrique"
+              target="_blank"
+              >Olhe minha conta da Rocketseat</a
+            >
+          </li>
+          <li>
+            <button
+              class="btn"
+              id="copyBtn"
+              data-copy="jorgeenriqueantunes@gmail.com"
+            >
+              Copiar meu Email
+            </button>
+          </li>
+          <li>
+            <button class="btn ghost" id="aboutBtn">Sobre Este Projeto</button>
+          </li>
+        </ul>
+      </section>
 
-      <!-- LINKS -->
-      <ul class="links-list">
-        <li>
-          <a class="btn" href="https://github.com/jorgedev1122" target="_blank"
-            >Veja meu GitHub</a
-          >
-        </li>
-        <li>
-          <a class="btn" href="https://www.rocketseat.com.br/" target="_blank"
-            >Conheça a Rocketseat</a
-          >
-        </li>
-        <li>
+      <section id="projects" class="reveal" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projetos em Destaque</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Portfólio Interativo</h3>
+            <p>
+              Meu verdadeiro portifólio, criado com animações suaves, design
+              moderno e responsivo, utilizando HTML, CSS e JS para uma
+              experiência única.
+            </p>
+            <a
+              class="btn small"
+              href="https://jorgedev1122.github.io/Portifolio/"
+              aria-label="Ver mais sobre Portfólio Interativo"
+              >Ver online</a
+            >
+          </article>
+          <article class="project-card">
+            <h3>CalcMod</h3>
+            <p>
+              Calculadora modular contendo várias funcionalidades, desde
+              calculadora simples, até calculadora de IMC, conversor de moedas e
+              muito mais, utilizando HTML, CSS e JS.
+            </p>
+            <a
+              class="btn small"
+              href="https://jorgedev1122.github.io/CalcMod/"
+              target="_blank"
+              >Ver online</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="social" class="reveal" aria-labelledby="social-title">
+        <h2 id="social-title">Redes Sociais</h2>
+        <div id="social-links">
           <a
-            class="btn"
-            href="https://www.instagram.com/jorge.dev90/"
+            href="https://github.com/jorgedev1122"
             target="_blank"
-            >Minha conta profissional (instagram)</a
-          >
-        </li>
-        <li>
+            aria-label="GitHub"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
           <a
-            class="btn"
-            href="https://app.rocketseat.com.br/me/jjorge-enrique"
+            href="https://www.youtube.com/@An%C3%B4nimo_2211BR"
             target="_blank"
-            >Olhe minha conta da Rocketseat</a
-          >
-        </li>
-        <li>
-          <button
-            class="btn"
-            id="copyBtn"
-            data-copy="jorgeenriqueantunes@gmail.com"
-          >
-            Copiar meu Email
-          </button>
-        </li>
-        <li>
-          <button class="btn ghost" id="aboutBtn">Sobre Este Projeto</button>
-        </li>
-      </ul>
+            aria-label="YouTube"
+            ><ion-icon name="logo-youtube"></ion-icon
+          ></a>
+          <a
+            href="https://app.rocketseat.com.br"
+            target="_blank"
+            aria-label="Rocketseat"
+            ><ion-icon name="happy"></ion-icon
+          ></a>
+        </div>
+      </section>
 
-      <!-- SOCIAL ICONS -->
-      <div id="social-links">
-        <a
-          href="https://github.com/jorgedev1122"
-          target="_blank"
-          aria-label="GitHub"
-          ><ion-icon name="logo-github"></ion-icon
-        ></a>
-
-        <a
-          href="https://www.youtube.com/@An%C3%B4nimo_2211BR"
-          target="_blank"
-          aria-label="YouTube"
-          ><ion-icon name="logo-youtube"></ion-icon
-        ></a>
-        <a
-          href="https://app.rocketseat.com.br"
-          target="_blank"
-          aria-label="Rocketseat"
-          ><ion-icon name="happy"></ion-icon
-        ></a>
-      </div>
-
-      <!-- FOOTER -->
       <footer id="footer">
         <p>
           Feito com <span class="heart">♡</span> por
@@ -103,6 +165,37 @@
         </p>
       </footer>
     </main>
+
+    <div
+      id="aboutModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="aboutModalTitle"
+    >
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal" aria-label="Fechar modal">
+          ×
+        </button>
+        <h3 id="aboutModalTitle">Sobre este projeto</h3>
+        <p>
+          Esse portfólio era um projeto simples do curso discover da rocketseat,
+          com foco em criar um site profissional e moderno utilizando os
+          aprendizados de HTML e CSS, ao fim do curso alguns meses depois, tive
+          a ideia de atualizar e fazer minha própria versão porém utilizando os
+          elementos disponíveis.
+        </p>
+        <p>Funcionalidades implementadas:</p>
+        <ul>
+          <li>Scroll reveal</li>
+          <li>Ripple em botões</li>
+          <li>Modo claro/escuro</li>
+          <li>Copiar e-mail com feedback</li>
+          <li>Modal com informações de contexto</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Ionicons -->
     <script
